@@ -34,8 +34,10 @@ jobs:
         download-path: "./model/1/variables"
     - name: View Output
       run: |
+        cd model/1
         ls
-        cat my-blob-name
+        cd model/1/variables
+        ls
     - uses: azure/docker-login@v1
       with:
         login-server: signgress.azurecr.io
