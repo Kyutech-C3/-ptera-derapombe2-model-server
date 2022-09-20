@@ -14,24 +14,21 @@ jobs:
     - name: Azure Blob Storage - Download Blob
       uses: armanrahman22/azblob-download-action@v0.0.4
       with:
-        storage-account-name: "signgressmodel"
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        connection-string: ${{ secrets.AZURE_CONNECTION_STRING }}
         container-name: "model"
         blob-name: "saved_model.pb"
         download-path: "./model/1"
     - name: Azure Blob Storage - Download Blob
       uses: armanrahman22/azblob-download-action@v0.0.4
       with:
-        storage-account-name: "signgressmodel"
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        connection-string: ${{ secrets.AZURE_CONNECTION_STRING }}
         container-name: "model"
         blob-name: "variables.data-00000-of-00001"
         download-path: "./model/1/variables"
     - name: Azure Blob Storage - Download Blob
       uses: armanrahman22/azblob-download-action@v0.0.4
       with:
-        storage-account-name: "signgressmodel"
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        connection-string: ${{ secrets.AZURE_CONNECTION_STRING }}
         container-name: "model"
         blob-name: "variables.index"
         download-path: "./model/1/variables"
