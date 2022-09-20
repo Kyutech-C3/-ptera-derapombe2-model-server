@@ -32,6 +32,10 @@ jobs:
         container-name: "model"
         blob-name: "variables.index"
         download-path: "./model/1/variables"
+    - name: View Output
+      run: |
+        ls
+        cat my-blob-name
     - uses: azure/docker-login@v1
       with:
         login-server: signgress.azurecr.io
