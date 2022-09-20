@@ -36,7 +36,7 @@ jobs:
       run: |
         cd model/1
         ls
-        cd model/1/variables
+        cd variables
         ls
     - uses: azure/docker-login@v1
       with:
